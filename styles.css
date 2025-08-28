@@ -370,3 +370,59 @@ body.light-mode #theme-toggle {
   background: #eee;
   color: #333;
 }
+#theme-toggle {
+  position: static;
+  top: 20px;
+  right: 20px;
+  
+}
+/* Theme toggle button inside nav */
+.theme-toggle {
+  font-size: 1.2rem;
+  padding: 6px 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: var(--panel);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.theme-toggle:hover { transform: scale(1.1); }
+.nav {
+  display: flex;
+  align-items: center;   /* vertically center everything */
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Buttons container */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (max-width: 780px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 4%;
+    top: 64px;
+    background: var(--panel);
+    padding: 12px;
+    border-radius: 12px;
+    gap: 8px;
+    width: min(280px, 92%);
+  }
+
+  .menu.open { display: flex; }
+
+  .burger { display: block; }
+}
+@media (min-width: 781px) {
+  .burger { display: none; }
+}
