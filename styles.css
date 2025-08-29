@@ -229,6 +229,26 @@ img{ max-width:100%; display:block; }
   gap: 1rem;
   animation: scroll 20s linear infinite;
 }
+.project-slider {
+  overflow-x: auto;       /* Allow horizontal scroll */
+  overflow-y: hidden;     /* Hide vertical scroll */
+  padding-bottom: 10px;   /* Small padding */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
+}
+
+.project-slider .cards {
+  display: flex;          /* Place cards in a row */
+  gap: 1rem;              /* Space between cards */
+}
+
+.project-slider .cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-slider .cards::-webkit-scrollbar-thumb {
+  background: var(--brand);
+  border-radius: 4px;
+}
 
 .card {
   flex: 0 0 280px; /* fixed width for cards */
@@ -239,11 +259,6 @@ img{ max-width:100%; display:block; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* Keyframes for infinite loop */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
 /* Fix Contact button text color */
 .menu .btn-sm {
   color: #0b0d10 !important;  /* black text */
@@ -425,4 +440,46 @@ body.light-mode #theme-toggle {
 }
 @media (min-width: 781px) {
   .burger { display: none; }
+}
+/* Achievements section - manual scroll like Projects */
+#achievements {
+  padding: 2rem;
+}
+
+#achievements h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Manual scroll container */
+#achievements .slider {
+  overflow-x: auto;         /* horizontal scroll */
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch; /* smooth on mobile */
+}
+
+#achievements .slide-track {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Cards inside Achievements */
+#achievements .card {
+  min-width: 250px;
+  padding: 1rem;
+  background: var(--panel);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* Scrollbar styling */
+#achievements .slider::-webkit-scrollbar {
+  height: 8px;
+}
+#achievements .slider::-webkit-scrollbar-thumb {
+  background: var(--brand);
+  border-radius: 4px;
 }
