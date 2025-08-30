@@ -221,6 +221,7 @@ img{ max-width:100%; display:block; }
   width: 100%;
   max-width: 900px;
   margin: auto;
+  
 }
 
 /* Track with sliding effect */
@@ -228,26 +229,6 @@ img{ max-width:100%; display:block; }
   display: flex;
   gap: 1rem;
   animation: scroll 20s linear infinite;
-}
-.project-slider {
-  overflow-x: auto;       /* Allow horizontal scroll */
-  overflow-y: hidden;     /* Hide vertical scroll */
-  padding-bottom: 10px;   /* Small padding */
-  -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
-}
-
-.project-slider .cards {
-  display: flex;          /* Place cards in a row */
-  gap: 1rem;              /* Space between cards */
-}
-
-.project-slider .cards::-webkit-scrollbar {
-  height: 8px;
-}
-
-.project-slider .cards::-webkit-scrollbar-thumb {
-  background: var(--brand);
-  border-radius: 4px;
 }
 
 .card {
@@ -480,6 +461,27 @@ body.light-mode #theme-toggle {
   height: 8px;
 }
 #achievements .slider::-webkit-scrollbar-thumb {
+  background: var(--brand);
+  border-radius: 4px;
+}
+.project-slider {
+ overflow-x: auto;         /* horizontal scroll */
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch; /* smooth on mobile */
+/* Smooth scroll on mobile */
+}
+
+.project-slider .cards {
+  display: flex;          /* Place cards in a row */
+  gap: 1rem;              /* Space between cards */
+}
+
+.project-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-slider::-webkit-scrollbar-thumb {
   background: var(--brand);
   border-radius: 4px;
 }
