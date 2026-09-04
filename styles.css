@@ -1,13 +1,16 @@
 /* --------- Base --------- */
-:root{
+:root {
   --bg: #0b0d10;
   --panel: #12161b;
   --soft: #1a1f26;
   --text: #e7ebf3;
   --muted: #9aa6b2;
-  --brand: #6aa6ff;          /* Accent color */
-  --brand-2: #9b8cff;        /* Secondary accent */
-  --ring: rgba(106,166,255,.45);
+
+  --brand: #3b82f6;
+  --brand-2: #3b82f6;
+
+  --ring: rgba(59,130,246,.45);
+
   --radius: 16px;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
@@ -260,7 +263,6 @@ img{ max-width:100%; display:block; }
   --ring: rgba(0,119,255,.3);
   --shadow: 0 4px 20px rgba(0,0,0,.1);
 }
-
 /* Fix card background in light mode */
 .light-mode .card {
   background: #fff;
