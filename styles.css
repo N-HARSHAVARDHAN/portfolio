@@ -457,7 +457,44 @@ body.light-mode #theme-toggle {
   flex-shrink: 0;
   text-align: center;
 }
+/* Mini Projects Slider */
 
+.project-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mini-project-cards {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.mini-project-cards .card {
+  flex: 0 0 calc(33.333% - 14px);
+  min-width: calc(33.333% - 14px);
+}
+
+.slider-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--accent-color, #333);
+  color: white;
+  z-index: 2;
+}
+
+.slider-btn:hover {
+  opacity: 0.8;
+}
 /* Scrollbar styling */
 #achievements .slider::-webkit-scrollbar {
   height: 8px;
